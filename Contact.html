@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - IdolMart</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Universal Reset */
+    * {
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    /* Body Styles */
+    body {
+      font-family: 'Merriweather', serif;
+      background-color: #ff69b4;
+      color: #333;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh; /* Ensure the height is constrained to the viewport */
+    }
+
+    /* Header Section */
+    header {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #00040a;
+      margin-top: 50px;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: #0b3d91;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 35px;
+      font-weight: bold;
+      color: #ff69b4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo img {
+      width: 70px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      font-size: 35px;
+      color: #ff69b4;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      color: #ff69b4;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    nav ul li a:hover {
+      background: #ff69b4;
+      color: #333;
+    }
+
+    /* Main Layout */
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: calc(100vh - 120px); /* Deduct header and footer heights */
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .frame-container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      flex: 2; /* Occupy more space for the frames */
+    }
+
+    .frame {
+      flex: 1;
+      background: #add8e6;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      overflow: hidden; /* Prevent content from overflowing */
+    }
+
+    .frame img {
+      max-width: 200%;
+      height: 200px; /* Set a consistent height for images */
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .frame p {
+      font-size: 0.9rem;
+      color: #00060f;
+      line-height: 1.4;
+    }
+
+    .chat-container {
+      flex: 1; /* Occupy less space for the chat box */
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-box {
+      flex: 1; /* Allow the chat box to expand within available space */
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      background: #f9f9f9;
+      margin-bottom: 10px;
+    }
+
+    .chat-container textarea {
+      flex-shrink: 0; /* Prevent textarea from shrinking */
+      width: 100%;
+      height: 60px;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .chat-container button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #0b3d91;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+
+    .chat-container button:hover {
+      background-color: #ff69b4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      background-color: #0b3d91;
+      color: white;
+      height: 60px;
+    }
+  </style>
+  <script>
+    function sendMessage() {
+      const chatBox = document.querySelector('.chat-box');
+      const userMessage = document.querySelector('#user-message').value;
+
+      if (userMessage.trim() !== "") {
+        chatBox.innerHTML += `<p><strong>You:</strong> ${userMessage}</p>`;
+        setTimeout(() => {
+          chatBox.innerHTML += `<p class="bot"><strong>IdolVerse:</strong> Good day! Thank you for contacting IdolVerse. How can I help you?</p>`;
+          chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the latest message
+        }, 1000);
+
+        document.querySelector('#user-message').value = ""; // Clear input
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+  <nav>
+    <div class="logo">
+      <img src="pink logo.png" alt="IdolMart Logo">
+      <span>IdolVerse</span>
+    </div>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a class="active" href="About.html">About</a></li>
+      <li><a href="Merch.html">KPop</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Others.html">Others</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-container">
+    <!-- Left Section: Frames -->
+    <div class="frame-container">
+      <div class="frame">
+        <img src="contact 1.png" alt=" Admin 1">
+        <p> <b> Contact:</b> 09934673812</p>
+        <p> <b> Email:</b> trishacastilar@gmail.com</p> 
+        <p> <b> FB:</b> Trisha Castilar</p>
+      </div>
+      <div class="frame">
+        <img src="contact 2.png" alt="Admin 2">
+        <p> <b> Contact:</b> 09974783902</p>
+        <p> <b> Email:</b> jenilenedolindo9@gmail.com</p> 
+        <p> <b> FB:</b> Jenilene Dolindo</p> 
+      </div>
+    </div>
+
+    <!-- Right Section: Chat Box -->
+    <div class="chat-container">
+      <h2>Chat with Us</h2>
+      <div class="chat-box"></div>
+      <textarea id="user-message" placeholder="Type your message here..."></textarea>
+      <button onclick="sendMessage()">Send Message</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 IdolVerse. All rights reserved.</p>
+  </footer>
+</body>
+</html>

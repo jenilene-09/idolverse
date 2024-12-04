@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - IdolMart</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Universal Reset */
+    * {
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    
+    /* Body Styles */
+    body {
+      font-family: 'Merriweather', serif;
+      background-color: #ff69b4; /* Light pink background */
+      color: #333;
+      height: 100vh; /* Ensure the body takes full screen height */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* To prevent scrolling */
+    }
+
+    /* Header Section */
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: #0b3d91;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 35px;
+      font-weight: bold;
+      color: #ff69b4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo img { 
+      width: 70px; 
+      height: auto; 
+      margin-right: 10px; 
+    } 
+    .logo span { 
+      font-size: 35px;
+      color: #ff69b4;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      color: #ff69b4;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    nav ul li a:hover {
+      background: #ff69b4;
+      color: #333;
+    }
+
+    /* Main Content Section */
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      height: calc(100vh - 150px); /* Fit content on one page */
+      margin-top: 100px;
+    }
+
+    .video-frame {
+      width: 60%; /* Frame size for the video */
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-frame video {
+      width: 100%; /* Full width inside the frame */
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .link-section {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .link-button {
+      display: inline-block;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #0b3d91; /* Blue background */
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none; /* Remove underline */
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .link-button:hover {
+      background-color: #ff69b4; /* Pink background on hover */
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #0b3d91;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="pink logo.png" alt="IdolMart Logo">
+      <span> IdolVerse</span>
+    </div>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a class="active" href="About.html">Back to About</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-section">
+    <!-- Video Frame -->
+    <div class="video-frame">
+      <video autoplay loop muted>
+        <source src="chingu.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <!-- Links Section -->
+    <div class="link-section">
+      <a href="https://www.youtube.com/channel/UCLkAepWjdylmXSltofFvsYQ" target="_blank" class="link-button">BTS</a>
+      <a href="https://www.youtube.com/@BLACKPINK" target="_blank" class="link-button">BLACKPINK</a>
+      <a href="https://www.youtube.com/channel/UCzCedBCSSltI1TFd3bKyN6g" target="_blank" class="link-button">EXO</a>
+      <a href="https://www.youtube.com/@TWICE" target="_blank" class="link-button">TWICE</a>
+      <a href="https://www.youtube.com/@pledis17" target="_blank" class="link-button">SEVENTEEN</a>
+      <a href="https://www.youtube.com/@StrayKids" target="_blank" class="link-button">STRAYKIDS</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 IdolVerse. All rights reserved.</p>
+  </footer>
+</body>
+</html>
